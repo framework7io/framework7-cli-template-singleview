@@ -7,6 +7,7 @@ var isCordova = !!window.cordova;
 // Framework7 App main instnce
 var app  = new Framework7({
     root: '#app', // App root element
+    animateNavBackIcon: true, // for iOS dynamic navbar
     material: Framework7.prototype.device.ios !== true, // Enable material theme on everything except iOS
     // Don't init automatically
     init: false
