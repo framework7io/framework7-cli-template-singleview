@@ -4,14 +4,7 @@
     "js": "./js/",
     "fonts": "./fonts/",
     "src": "./www/",
-    "scripts": "./scripts/",
     "xml": {
-        "hook": [
-            {
-                "type": "after_prepare",
-                "src": "scripts/f7-platform-condition.js"
-            }
-        ],
         "preference": [
             {
                 "name": "webviewbounce",
