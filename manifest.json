@@ -2,5 +2,6 @@
     "template": "singleview",
     "css": "./css/",
     "js": "./js/",
-    "fonts": "./fonts/"
+    "fonts": "./fonts/",
+    "src": "./src/",
 }
