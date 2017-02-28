@@ -68,4 +68,9 @@ You can use it in any place of HTML files, even in HEAD section to use different
 </head>
 ```
 
-
+Or inside of attribures:
+```html
+<div class="view <!-- f7-if-ios -->navbar-through<!-- f7-endif-ios --> <!-- f7-if-android -->navbar-fixed<!-- f7-endif-android -->">
+    ...
+</div>
+```
