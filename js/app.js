@@ -18,6 +18,17 @@ var mainView = app.addView('.view-main', {
     dynamicNavbar: true
 });
 
+// Pages
+app.onPageInit('home', function (page) {
+    // Do something when Home/Index page is initialized
+});
+app.onPageInit('about', function (page) {
+    // Do something when About page is initialized
+});
+app.onPageInit('form', function (page) {
+    // Do something when Form page is initialized
+});
+
 // Login Screen Demo
 $$('#my-login-screen .login-button').on('click', function () {
     var username = $$('#my-login-screen [name="username"]').val();
