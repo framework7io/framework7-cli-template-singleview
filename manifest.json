@@ -3,5 +3,27 @@
     "css": "./css/",
     "js": "./js/",
     "fonts": "./fonts/",
-    "src": "./src/"
+    "src": "./www/",
+    "xml": {
+        "hook": [
+            {
+                "type": "after_prepare",
+                "src": "scripts/f7-platform-condition.js"
+            }
+        ],
+        "preference": [
+            {
+                "name": "webviewbounce",
+                "value": "false"
+            },
+            {
+                "name": "UIWebViewBounce",
+                "value": "false"
+            },
+            {
+                "name": "DisallowOverscroll",
+                "value": "true"
+            }
+        ]
+    }
 }
