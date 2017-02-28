@@ -26,7 +26,7 @@ $ f7 platfrom add ios
 $ f7 platfrom add android
 ```
 
-Use `serve` command to run the app locally (in browser). App will be hosted at `http://localhost/www/ios/` (for iOS platform) and `http://localhost/www/android/` (for Android platform):
+Use `f7 serve` command to run the app locally (in browser). App will be hosted at `http://localhost/www/ios/` (for iOS platform) and `http://localhost/www/android/` (for Android platform):
 ```
 $ f7 serve
 ```
