@@ -18,42 +18,27 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
   <title>My App</title>
+  
   <!-- 
-  Load theme automatically depending on device. iOS theme on iOS devices. Material theme on everything else. 
-  If you don't need this and you want to use specifix theme then remove the following <script> and include required styles directly, e.g.:
-    For iOS theme:
-    <link rel="stylesheet" href="css/framework7-icons.css">
-    <link rel="stylesheet" href="css/framework7.ios.min.css">
-    <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
-
-    For Material theme:
-    <link rel="stylesheet" href="css/material-icons.css">
-    <link rel="stylesheet" href="css/framework7.material.min.css">
-    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+  Load theme automatically depending on platform. iOS theme on iOS devices. Material theme on Android devices.
   -->
-  <script>
-    (function () {
-      var ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-      if (ios) {
-        document.write(
-          '<link href="css/framework7-icons.css" rel="stylesheet">' +
-          '<link href="css/framework7.ios.min.css" rel="stylesheet">' +
-          '<link href="css/framework7.ios.colors.min.css" rel="stylesheet">'
-          // Uncomment next line to use RTL layout
-          // + '<link href="css/framework7.ios.rtl.css" rel="stylesheet">'
-        );
-      }
-      else {
-        document.write(
-          '<link href="css/material-icons.css" rel="stylesheet">' +
-          '<link href="css/framework7.material.min.css" rel="stylesheet">' +
-          '<link href="css/framework7.material.colors.min.css" rel="stylesheet">'
-          // Uncomment next line to use RTL layout
-          // + '<link href="css/framework7.material.rtl.css" rel="stylesheet">'
-        );
-      }
-    })();
-  </script>
+  
+  <!-- f7-if-ios -->
+  <link rel="stylesheet" href="css/framework7-icons.css">
+  <link rel="stylesheet" href="css/framework7.ios.min.css">
+  <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
+  <!-- Uncomment to use RTL Layout -->
+  <!-- <link href="css/framework7.ios.rtl.css" rel="stylesheet"> -->
+  <!-- f7-endif-ios -->
+  
+  <!-- f7-if-android -->
+  <link rel="stylesheet" href="css/material-icons.css">
+  <link rel="stylesheet" href="css/framework7.material.min.css">
+  <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+  <!-- Uncomment to use RTL Layout -->
+  <!-- <link href="css/framework7.material.rtl.css" rel="stylesheet"> -->
+  <!-- f7-endif-android -->
+  
   <!-- Path to your custom app styles -->
   <link rel="stylesheet" href="css/app.css">
 </head>
@@ -99,28 +84,48 @@
     </div>
     <!-- Views-->
     <div class="views">
-      <!-- Your main view, should have "view-main" class. Because we need through navbar, it has additional appropriate class-->
+      <!-- Your main view, should have "view-main" class. Because we need through navbar for iOS and fixed navbar for Android, it has additional conditional classes -->
+      
+      <!-- f7-if-ios -->
       <div class="view view-main navbar-through">
-        <!-- Top Navbar-->
+      <!-- f7-endif-ios -->
+      
+      <!-- f7-if-android -->
+      <div class="view view-main navbar-fixed">
+      <!-- f7-endif-android -->
+
+        <!-- iOS Top Navbar. Should be inside of View -->
+        <!-- f7-if-ios -->
         <div class="navbar">
           <div class="navbar-inner">
             <div class="left sliding">
-              <a href="#" class="link icon-only open-panel" data-panel="left">
-                <i class="icon icon-bars"></i>
-              </a>
+              <a href="#" class="link icon-only open-panel" data-panel="left"><i class="icon icon-bars"></i></a>
             </div>
             <div class="center sliding">My App</div>
             <div class="right sliding">
-              <a href="#" class="link icon-only open-panel" data-panel="right">
-                <i class="icon icon-bars"></i>
-              </a>
+              <a href="#" class="link icon-only open-panel" data-panel="right"><i class="icon icon-bars"></i></a>
             </div>
           </div>
         </div>
+        <!-- f7-endif-ios -->
         <!-- Pages-->
         <div class="pages">
           <!-- Page, data-page contains page name. We use fixed toolbar so we have additional "toolbar-fixed" class on this page-->
           <div class="page toolbar-fixed" data-page="home">
+            <!-- Android Top Navbar. Should be inside of Page -->
+            <!-- f7-if-android -->
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="left">
+                  <a href="#" class="link icon-only open-panel" data-panel="left"><i class="icon icon-bars"></i></a>
+                </div>
+                <div class="center">My App</div>
+                <div class="right">
+                  <a href="#" class="link icon-only open-panel" data-panel="right"><i class="icon icon-bars"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- f7-endif-android -->
             <!-- Scrollable page content-->
             <div class="page-content">
               
