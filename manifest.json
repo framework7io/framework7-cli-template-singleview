@@ -3,5 +3,5 @@
     "css": "./css/",
     "js": "./js/",
     "fonts": "./fonts/",
-    "src": "./src/",
+    "src": "./src/"
 }
