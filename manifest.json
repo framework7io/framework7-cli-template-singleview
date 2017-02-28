@@ -4,6 +4,9 @@
     "js": "./js/",
     "fonts": "./fonts/",
     "src": "./www/",
+    "scripts": [
+        "scripts/f7-platform-condition.js"
+    ],
     "xml": {
         "hook": [
             {
