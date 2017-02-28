@@ -12,7 +12,7 @@ $ npm install framework7-cli -g
 
 Create Framework7 App using Framework7 CLI:
 ```
-$ f7 create hello com.example.hello HelloWorld
+$ f7 create myapp com.example.myapp MyApp
 ```
 
 Go to created app folder:
