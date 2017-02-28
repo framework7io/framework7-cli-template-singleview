@@ -26,7 +26,7 @@ $ f7 platfrom add ios
 $ f7 platfrom add android
 ```
 
-Use `f7 serve` command to run the app locally (in browser). App will be hosted at `http://localhost/www/ios/` (for iOS platform) and `http://localhost/www/android/` (for Android platform):
+Use `f7 serve` command to run the app locally (in browser). App will be hosted at `http://localhost:8000/www/ios/` (for iOS platform) and `http://localhost:8000/www/android/` (for Android platform):
 ```
 $ f7 serve
 ```
@@ -54,23 +54,23 @@ You can use it in any place of HTML files, even in HEAD section to use different
 ```html
 <head>
     ...
-    <!-- f7-if-ios -->
+    <!-- @f7-if-ios -->
     <link rel="stylesheet" href="css/framework7-icons.css">
     <link rel="stylesheet" href="css/framework7.ios.min.css">
     <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
-    <!-- f7-endif-ios -->
+    <!-- @f7-endif-ios -->
 
-    <!-- f7-if-android -->
+    <!-- @f7-if-android -->
     <link rel="stylesheet" href="css/material-icons.css">
     <link rel="stylesheet" href="css/framework7.material.min.css">
     <link rel="stylesheet" href="css/framework7.material.colors.min.css">
-    <!-- f7-endif-android -->
+    <!-- @f7-endif-android -->
 </head>
 ```
 
 Or inside of attribures:
 ```html
-<div class="view <!-- f7-if-ios -->navbar-through<!-- f7-endif-ios --> <!-- f7-if-android -->navbar-fixed<!-- f7-endif-android -->">
+<div class="view <!-- @f7-if-ios -->navbar-through<!-- @f7-endif-ios --> <!-- @f7-if-android -->navbar-fixed<!-- @f7-endif-android -->">
     ...
 </div>
 ```

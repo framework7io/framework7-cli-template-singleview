@@ -23,21 +23,21 @@
   Load theme styles automatically depending on platform. iOS theme on iOS devices. Material theme on Android devices.
   -->
   
-  <!-- f7-if-ios -->
+  <!-- @f7-if-ios -->
   <link rel="stylesheet" href="css/framework7-icons.css">
   <link rel="stylesheet" href="css/framework7.ios.min.css">
   <link rel="stylesheet" href="css/framework7.ios.colors.min.css">
   <!-- Uncomment next line to use RTL Layout: -->
   <!-- <link href="css/framework7.ios.rtl.css" rel="stylesheet"> -->
-  <!-- f7-endif-ios -->
+  <!-- @f7-endif-ios -->
   
-  <!-- f7-if-android -->
+  <!-- @f7-if-android -->
   <link rel="stylesheet" href="css/material-icons.css">
   <link rel="stylesheet" href="css/framework7.material.min.css">
   <link rel="stylesheet" href="css/framework7.material.colors.min.css">
   <!-- Uncomment next line to use RTL Layout: -->
   <!-- <link href="css/framework7.material.rtl.css" rel="stylesheet"> -->
-  <!-- f7-endif-android -->
+  <!-- @f7-endif-android -->
   
   <!-- Path to your custom app styles -->
   <link rel="stylesheet" href="css/app.css">
@@ -85,9 +85,9 @@
     <!-- Views-->
     <div class="views">
       <!-- Your main view, should have "view-main" class. Because we need through navbar for iOS and fixed navbar for Android, it has additional conditional classes -->
-      <div class="view view-main <!-- f7-if-ios -->navbar-through<!-- f7-endif-ios --> <!-- f7-if-android -->navbar-fixed<!-- f7-endif-android -->">
+      <div class="view view-main <!-- @f7-if-ios -->navbar-through<!-- @f7-endif-ios --> <!-- @f7-if-android -->navbar-fixed<!-- @f7-endif-android -->">
         <!-- iOS Top Navbar. Should be inside of View -->
-        <!-- f7-if-ios -->
+        <!-- @f7-if-ios -->
         <div class="navbar">
           <div class="navbar-inner">
             <div class="left sliding">
@@ -99,13 +99,13 @@
             </div>
           </div>
         </div>
-        <!-- f7-endif-ios -->
+        <!-- @f7-endif-ios -->
         <!-- Pages-->
         <div class="pages">
           <!-- Page, data-page contains page name. We use fixed toolbar so we have additional "toolbar-fixed" class on this page-->
           <div class="page toolbar-fixed" data-page="home">
             <!-- Android Top Navbar. Should be inside of Page -->
-            <!-- f7-if-android -->
+            <!-- @f7-if-android -->
             <div class="navbar">
               <div class="navbar-inner">
                 <div class="left">
@@ -117,7 +117,7 @@
                 </div>
               </div>
             </div>
-            <!-- f7-endif-android -->
+            <!-- @f7-endif-android -->
             <!-- Scrollable page content-->
             <div class="page-content">
               
